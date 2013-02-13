@@ -2,7 +2,7 @@
 
 Compares project's package.json version and latest GitHub tag version and returns the result.
 
-**github-update-checker** automatically tries to get project's `package.json` and to construct a URL to GitHub API from `repository.url` section, but can get everything as an option.
+github-update-checker automatically tries to get project's `package.json` and construct a URL to GitHub API from `repository.url` section, but can get everything as an option.
 
 
 ##Methods
@@ -18,7 +18,9 @@ uptodate( callback(answer) )
 ```
 
 **answer**
+
 Type: Boolean or String
+
 `true` (up to date), `false` (needs update) or `'error'`.
 
 
@@ -33,19 +35,27 @@ uptodate({
 ```
 
 **packagePath**
+
 Type: String
+
 Absolute path to project package.json file. **github-update-checker** will try to find it itself.
 
 **url**
+
 Type: String
+
 Full URL to project GitHub tags API. **github-update-checker** will try to construct it automatically from `repository.url` in package.json.
 
 **timeout**
+
 Type: Number
+
 When give up waiting for GitHub API response. Default is 3000ms.
 
 **callback**
+
 Type: Function
+
 Gets `true` (up to date), `false` (needs update) or `'error'`.
 
 
