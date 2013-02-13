@@ -38,13 +38,13 @@ uptodate({
 
 Type: String
 
-Absolute path to project package.json file. **github-update-checker** will try to find it itself.
+Absolute path to project's package.json file. github-update-checker will try to find it itself.
 
 **url**
 
 Type: String
 
-Full URL to project GitHub tags API. **github-update-checker** will try to construct it automatically from `repository.url` in package.json.
+Full URL to project's GitHub tags API. github-update-checker will try to construct it automatically from `repository.url` in package.json.
 
 **timeout**
 
