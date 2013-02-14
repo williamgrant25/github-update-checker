@@ -1,16 +1,20 @@
 {
   "name": "github-update-checker",
   "description": "Compares project's package.json version and latest GitHub tag version. `uptodate` method returns true (up to date) or false (needs update).",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "author": {
     "name": "Vyacheslav Kotiya",
     "email": "clexit@clexit.com"
   },
-  "keywords": [ "github", "update", "check", "package.json" ],
+  "keywords": [
+    "github",
+    "update",
+    "check",
+    "package.json"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/clexit/github-update-checker.git"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

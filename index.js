@@ -2,7 +2,8 @@ var https = require( 'https' ),
     path  = require( 'path' ),
     fs    = require( 'fs' ),
 
-    GITHUB_API     = 'https://api.github.com/repos/',
+    GITHUB_HOST    = 'api.github.com',
+    GITHUB_API     = 'https://' + GITHUB_HOST + '/repos/',
 
     packageJSON    = null, // getPackageJSON
     callback       = null, // uptodate
@@ -67,7 +68,7 @@ function getCurrentVersion( options ) {
 
 
 function getLatestVersion( options ) {
-    var url      = options.url      || getURLfromPackage(),
+    var url      = getURL( options ),
         timeout  = options.timeout  || 3000;
 
 
@@ -76,7 +77,6 @@ function getLatestVersion( options ) {
         callback( 'error' );
         return;
     }
-
 
     var request = https.get( url, function( res ) {
         var data = [];
@@ -101,6 +101,17 @@ function getLatestVersion( options ) {
         callback( 'error' );
         return;
     });
+}
+
+
+function getURL( options ) {
+    var url   = options.url || getURLfromPackage(),
+        parts = url.split( '/' );
+
+    return {
+        host: GITHUB_HOST,
+        path: '/' + parts.slice( 3, parts.length ).join( '/' )
+    };
 }
 
 
