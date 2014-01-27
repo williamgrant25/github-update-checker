@@ -69,3 +69,7 @@ updater.uptodate(function( uptodate ) {
     // uptodate is true, false or 'error'
 });
 ```
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/clexit/github-update-checker/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
