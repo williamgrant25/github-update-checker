@@ -1,9 +1,8 @@
 {
   "name": "github-update-checker",
   "description": "Compares project's package.json version and latest GitHub tag version. `uptodate` method returns true (up to date) or false (needs update).",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": {
-    "name": "Vyacheslav Kotiya",
     "email": "clexit@clexit.com"
   },
   "keywords": [
