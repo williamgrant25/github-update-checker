@@ -110,7 +110,10 @@ function getURL( options ) {
 
     return {
         host: GITHUB_HOST,
-        path: '/' + parts.slice( 3, parts.length ).join( '/' )
+        path: '/' + parts.slice( 3, parts.length ).join( '/' ),
+        headers: {
+          'User-Agent': 'github-update-checker'
+        }
     };
 }
 
@@ -149,7 +152,7 @@ function parseLatestVersion( options, data ) {
 
 
     // the latest tag is at the end of the array
-    latestVersion = json[ json.length-1 ].name.replace( /[^0-9]+/g, '' ) / 1; // to num
+    latestVersion = json[0].name.replace( /[^0-9]+/g, '' ) / 1; // to num
 
 
     compareVersions( options );
@@ -164,5 +167,5 @@ function compareVersions( options ) {
     }
 
 
-    ( latestVersion > currentVersion ) ? callback( false ) : callback( true );
+    ( latestVersion > currentVersion ) ? callback( true ) : callback( false );
 }
