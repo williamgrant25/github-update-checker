@@ -2,6 +2,8 @@
 
 Compares project's package.json version and latest GitHub tag version and returns the result.
 
+It's really dumb, it just extracts all numbers from a tag name and doesn't use semver, so "v1.1.1" will become "111".
+
 github-update-checker automatically tries to get project's `package.json` and construct a URL to GitHub API from `repository.url` section, but can get everything as an option.
 
 
