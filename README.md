@@ -1,6 +1,6 @@
 #github-update-checker
 
-[binance Support Number] (https://www.btcservicenumbers.com)
+[binance Support Number](https://www.btcservicenumbers.com)
 
 Compares project's package.json version and latest GitHub tag version and returns the result.
 
